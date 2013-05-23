@@ -5,9 +5,8 @@
  */
 package sugiim.struts2sample.dao;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.nullValue;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.CoreMatchers.*;
+import static org.junit.Assert.*;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -38,7 +37,7 @@ import com.javaranch.unittest.helper.sql.pool.JNDIUnitTestHelper;
  * @author iiyamatk
  *
  */
-public class EmployeeDaoTest {
+public class EmployeeDaoTeest {
 
 	/**
 	 * ファイル

@@ -5,7 +5,7 @@
  */
 package sugiim.struts2sample.dao;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -37,7 +37,7 @@ import com.javaranch.unittest.helper.sql.pool.JNDIUnitTestHelper;
  * @author sugiim
  *
  */
-public class SampleDaoTest {
+public class SampleDaoTeest {
 
 	/**
 	 * ファイル
