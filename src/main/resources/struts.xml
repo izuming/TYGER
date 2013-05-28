@@ -89,6 +89,15 @@
 			<exception-mapping exception="java.lang.Exception" result="exception"/>
 		</global-exception-mappings>
 
+		<!-- トップ画面（初期画面） -->
+		<action name="top" class="sugiim.struts2sample.action.LoginAction">
+			<result name="success">/WEB-INF/jsp/top.jsp</result>
+			<result name="input">/WEB-INF/jsp/top.jsp</result>
+			<result name="loginFailed">/WEB-INF/jsp/top.jsp</result>
+			<result name="login" type="redirect">menu</result>
+		</action>
+
+
 		<action name="login" class="sugiim.struts2sample.action.LoginAction">
 			<result name="success">/WEB-INF/jsp/login.jsp</result>
 			<result name="input">/WEB-INF/jsp/login.jsp</result>

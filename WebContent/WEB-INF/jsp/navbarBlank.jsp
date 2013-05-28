@@ -44,7 +44,7 @@
 		<div id="navbar" class="navbar navbar-fixed-top"><%-- /navbar --%>
 			<div class="navbar-inner">
 				<div class="container-fluid">
-					<a class="brand" href="./">Sample system</a>
+					<a class="brand" href="./">TYGER</a>
 				</div>
 			</div>
 		</div><%-- navbar/ --%>

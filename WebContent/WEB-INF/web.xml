@@ -18,7 +18,8 @@
   </resource-ref>
   <!-- welcomeとしてlogin.actionを指定。WebContent直下に対応する空ファイル(login.action)が必須 -->
   <welcome-file-list>
-    <welcome-file>login.action</welcome-file>
+    <!-- <welcome-file>login.action</welcome-file>  -->
+    <welcome-file>top.action</welcome-file>
   </welcome-file-list>
   <!-- sessionTimeout(分単位。Tomcatのデフォルトは30分) -->
   <session-config>

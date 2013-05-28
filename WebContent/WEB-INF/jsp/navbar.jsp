@@ -49,7 +49,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="brand" href="./">Sample system</a>
+					<a class="brand" href="./">TYGER</a>
 					<div class="nav-collapse">
 						<ul class="nav pull-right" style="padding-top:15px;">
 							<li><span><s:property value="tenpo.TenpoName"/>ｘｘｘ店</span></li>

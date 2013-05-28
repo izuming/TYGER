@@ -23,6 +23,7 @@ public class LoginAction extends ActionSupport {
 
 	/**
 	 * ログ
+	 * 
 	 */
 	private Log log = LogFactory.getLog(LoginAction.class);
 

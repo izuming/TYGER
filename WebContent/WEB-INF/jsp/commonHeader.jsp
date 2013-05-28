@@ -9,7 +9,7 @@
 		<meta http-equiv="Expires" content="0">
 		<link href="./css/sysstyle.css" rel="stylesheet" type="text/css">
 		${param.addCss}
-		<title>Sample system</title>
+		<title>TYGER</title>
 		<script type="text/javascript" src="./js/jquery-1.8.1.js"></script>
 		<script type="text/javascript" src="./js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="./js/common.js"></script>
