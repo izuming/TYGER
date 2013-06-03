@@ -47,7 +47,7 @@
 						<div class="control-group" style="vertical-align:middle;">
 							<div class="span2" style="text-align: right;">
 								<div>test</div>
-								<span class="inputLabel">ＩＤ</span>
+								<span class="inputLabel">top_ＩＤ</span>
 							</div>
 							<div class="span6" style="text-align: left;">
 								<s:textfield cssClass="input-large" name="employee.employeeId" maxlength="16" placeholder="ID?" autocomplete="off"/>
@@ -73,6 +73,7 @@
 			<div class="offset2"></div>
 		</div>
 	</div><!-- contents -->
+	<!-- ここから複製領域 -->
 	<div class="container"><!-- contents -->
 	<div class="row">
 		<div class="offset2 span8">
@@ -81,7 +82,7 @@
 					<div class="control-group" style="vertical-align:middle;">
 						<div class="span2" style="text-align: right;">
 							<div>test</div>
-							<span class="inputLabel">ＩＤ</span>
+							<span class="inputLabel">top_ＩＤ</span>
 						</div>
 						<div class="span6" style="text-align: left;">
 							<s:textfield cssClass="input-large" name="employee.employeeId" maxlength="16" placeholder="ID?" autocomplete="off"/>
@@ -107,5 +108,6 @@
 		<div class="offset2"></div>
 	</div>
 	</div><!-- contents -->
+	<!-- ここまで複製領域 -->
 </body>
 </html>

@@ -45,6 +45,7 @@
 			<div class="navbar-inner">
 				<div class="container-fluid">
 					<a class="brand" href="./">TYGER</a>
+					<a class="brand" href="login"  >ろぐいん</a>
 				</div>
 			</div>
 		</div><%-- navbar/ --%>
