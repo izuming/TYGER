@@ -4090,6 +4090,16 @@ input[type="submit"].btn.btn-mini {
   color: #ffffff;
 }
 
+.navbar .menu {
+  display: block;
+  padding: 8px 20px 12px;
+  margin-left: -20px;
+  font-size: 30px;
+  font-weight: 200;
+  line-height: 1;
+  color: #ffffff;
+}
+
 .navbar .brand:hover {
   text-decoration: none;
 }
