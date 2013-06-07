@@ -46,8 +46,25 @@
 				<div class="container-fluid">
 					<a class="brand" href="./">TYGER</a>
 					<div align="right" >
-					<a class="menu" href="login">ろぐいん</a>
+<!-- 					<a class="menu" href="login">ろぐいん</a> -->
+						<a href="#myModal" role="button" class="menu" data-toggle="modal">ろぐいん</a>
 					</div>
 				</div>
 			</div>
 		</div><%-- navbar/ --%>
+
+		<!-- Modal -->
+
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">ろぐいん</h3>
+  </div>
+  <div class="modal-body">
+    <p>工事中orz</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">きゃんせる</button>
+    <button class="btn btn-primary">ろぐいんする</button>
+  </div>
+</div>

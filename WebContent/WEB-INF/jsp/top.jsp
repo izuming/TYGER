@@ -24,7 +24,7 @@
 </script>
 	<div id="mainContainer" class="container">
 		<div class="span8">
-		
+
 				<!-- 1行目のエリア -->
 				<div class="row" style="margin-top:40px">
 					<textarea class="span4">1</textarea>
@@ -32,19 +32,35 @@
 					<div class="span4">
 					</div>
 				</div>
-		
+
 				<!-- 2行目のエリア -->
 				<div class="row">
 					<textarea class="span4">3</textarea>
-					<textarea class="span4">4</textarea>
+<!-- Button to trigger modal -->
+<a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
+
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Modal header</h3>
+  </div>
+  <div class="modal-body">
+    <p>One fine body…</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary">Save changes</button>
+  </div>
+</div>
 					<div class="span4">
 					</div>
 				</div>
-		
+
 		</div>
 
 		<div class="span1 navbar divider-vertical"></div>
-		
+
 		<div class="span3 nav nav-list bs-docs-sidenav">
 				<!-- 1行目のエリア -->
 				<div class="row">
@@ -56,6 +72,8 @@
 
 	</div>
 
+
+</div>
 
 </body>
 </html>
