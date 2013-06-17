@@ -27,53 +27,9 @@
 					<ul class="thumbnails">
 						<li class="span4">
 							<div class="thumbnail">
-								<a href="sample">Select Sample</a>
-								<div class="caption">
-								<p>検索処理のサンプルです</p>
-								</div>
-							</div>
-						</li>
-					</ul>
-					<ul class="thumbnails">
-						<li class="span4">
-							<div class="thumbnail">
-								<a href="sample2">Select Sample(ajax/json)</a>
-								<div class="caption">
-								<p>検索処理を非同期に行うサンプルです。</p>
-								<p>ajax, jsonを使って、非同期に検索結果を取得する処理を行います。</p>
-								</div>
-							</div>
-						</li>
-					</ul>
-					<ul class="thumbnails">
-						<li class="span4">
-							<div class="thumbnail">
-								<a href="registSample">registSample</a>
-								<div class="caption">
-								<p>新規登録のサンプルです。</p>
-								<p>入力チェック→確認ダウアログ→DB登録→登録完了画面</p>
-								</div>
-							</div>
-						</li>
-					</ul>
-					<ul class="thumbnails">
-						<li class="span4">
-							<div class="thumbnail">
-								<a href="updateSample">updateSample</a>
-								<div class="caption">
-								<p>更新、削除処理のサンプルです。</p>
-								<p>検索→更新（または削除）</p>
-								</div>
-							</div>
-						</li>
-					</ul>
-					<ul class="thumbnails">
-						<li class="span4">
-							<div class="thumbnail">
 								<a href="event_top">イベント一覧</a>
 								<div class="caption">
-								<p>更新、削除処理のサンプルです。</p>
-								<p>検索→更新（または削除）</p>
+								<p>イベント一覧です。</p>
 								</div>
 							</div>
 						</li>

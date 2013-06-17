@@ -198,6 +198,12 @@
 			<result>/WEB-INF/jsp/sampleStatistics.jsp</result>
 		</action>
 
+		<!-- イベント一覧の初期表示用 -->
+		<action name="event_top">
+			<result>/WEB-INF/jsp/event_top.jsp</result>
+		</action>
+
+
 		<!-- bootstrap tab Sample -->
 		<action name="sampleTab">
 			<result>/WEB-INF/jsp/sampleTab.jsp</result>
