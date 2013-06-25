@@ -14,6 +14,31 @@ import java.util.Date;
  */
 public class Event implements Serializable {
 
+	public Event(int eventId, String eventTitle, String eventSubtitle, String eventSponsor, String eventDetail,
+			String eventPlace, String eventUrl, Date eventOpenstarttime, Date eventOpenendtime,
+			Date eventAcceptancestarttime, Date eventAcceptanceendtime, String eventStopflag, String eventDelflag,
+			Date eventUpdatetime) {
+		super();
+		this.eventId = eventId;
+		this.eventTitle = eventTitle;
+		this.eventSubtitle = eventSubtitle;
+		this.eventSponsor = eventSponsor;
+		this.eventDetail = eventDetail;
+		this.eventPlace = eventPlace;
+		this.eventUrl = eventUrl;
+		this.eventOpenstarttime = eventOpenstarttime;
+		this.eventOpenendtime = eventOpenendtime;
+		this.eventAcceptancestarttime = eventAcceptancestarttime;
+		this.eventAcceptanceendtime = eventAcceptanceendtime;
+		this.eventStopflag = eventStopflag;
+		this.eventDelflag = eventDelflag;
+		this.eventUpdatetime = eventUpdatetime;
+	}
+
+	public Event() {
+		// TODO 自動生成されたコンストラクター・スタブ
+	}
+
 	/**
 	 * serialVersionUID
 	 */
@@ -92,45 +117,6 @@ public class Event implements Serializable {
 
 
 
-
-
-
-
-
-
-
-
-	/**
-	 * デフォルトコンストラクタ
-	 */
-	public Event() {
-	}
-
-	/**
-	 * コンストラクタ
-	 *
-	 * @param employeeId 従業員ID
-	 * @param password パスワード
-	 */
-	public Event(int eventId, String eventTitle, String eventSubtitle, String eventSponsor, String eventDetail, String eventPlace, String eventUrl, Date eventOpenstarttime, Date eventOpenendtime, Date eventAcceptancestarttime, Date eventAcceptanceendtime, String eventStopflag, String eventDelflag, Date eventUpdatetime) {
-		this.eventId = eventId;
-		this.eventTitle = eventTitle;
-		this.eventSubtitle = eventSubtitle;
-		this.eventSponsor = eventSponsor;
-		this.eventDetail = eventDetail;
-		this.eventPlace = eventPlace;
-		this.eventUrl = eventUrl;
-		this.eventOpenstarttime = eventOpenstarttime;
-		this.eventOpenendtime = eventOpenendtime;
-		this.eventAcceptancestarttime = eventAcceptancestarttime;
-		this.eventAcceptanceendtime = eventAcceptanceendtime;
-		this.eventStopflag = eventStopflag;
-		this.eventDelflag = eventDelflag;
-		this.eventUpdatetime = eventUpdatetime;
-		
-	}
-
-
 //	/* (非 Javadoc)
 //	 * @see java.lang.Object#toString()
 //	 */
@@ -162,72 +148,113 @@ public class Event implements Serializable {
 	public void setEventId(int eventId) {
 		this.eventId=eventId;
 	}
-	
-	
-	
-//
-//	/**
-//	 * 従業員IDを設定する
-//	 *
-//	 * @param employeeId セットする employeeId
-//	 */
-//	public void setEmployeeId(String employee_id) {
-//		this.employeeId = employee_id;
-//	}
-//
-//	/**
-//	 * パスワードを取得する
-//	 *
-//	 * @return password
-//	 */
-//	public String getPassword() {
-//		return password;
-//	}
-//
-//	/**
-//	 * パスワードを設定する
-//	 *
-//	 * @param password セットする password
-//	 */
-//	public void setPassword(String password) {
-//		this.password = password;
-//	}
-//
-//	/**
-//	 * 更新日時を取得する
-//	 *
-//	 * @return updtDate
-//	 */
-//	public Date getUpdtDate() {
-//		return updtDate;
-//	}
-//
-//	/**
-//	 * 更新日時を設定する
-//	 *
-//	 * @param updtDate セットする updtDate
-//	 */
-//	public void setUpdtDate(Date updt_date) {
-//		this.updtDate = updt_date;
-//	}
-//
-//	/**
-//	 * 従業員名称を取得する
-//	 *
-//	 * @return employeeName
-//	 */
-//	public String getEmployeeName() {
-//		return employeeName;
-//	}
-//
-//	/**
-//	 * 従業員名称を設定する
-//	 *
-//	 * @param employeeName セットする employeeName
-//	 */
-//	public void setEmployeeName(String employeeName) {
-//		this.employeeName = employeeName;
-//	}
 
+	public String getEventTitle() {
+		return eventTitle;
+	}
+
+	public void setEventTitle(String eventTitle) {
+		this.eventTitle = eventTitle;
+	}
+
+	public String getEventSubtitle() {
+		return eventSubtitle;
+	}
+
+	public void setEventSubtitle(String eventSubtitle) {
+		this.eventSubtitle = eventSubtitle;
+	}
+
+	public String getEventSponsor() {
+		return eventSponsor;
+	}
+
+	public void setEventSponsor(String eventSponsor) {
+		this.eventSponsor = eventSponsor;
+	}
+
+	public String getEventDetail() {
+		return eventDetail;
+	}
+
+	public void setEventDetail(String eventDetail) {
+		this.eventDetail = eventDetail;
+	}
+
+	public String getEventPlace() {
+		return eventPlace;
+	}
+
+	public void setEventPlace(String eventPlace) {
+		this.eventPlace = eventPlace;
+	}
+
+	public String getEventUrl() {
+		return eventUrl;
+	}
+
+	public void setEventUrl(String eventUrl) {
+		this.eventUrl = eventUrl;
+	}
+
+	public Date getEventOpenstarttime() {
+		return eventOpenstarttime;
+	}
+
+	public void setEventOpenstarttime(Date eventOpenstarttime) {
+		this.eventOpenstarttime = eventOpenstarttime;
+	}
+
+	public Date getEventOpenendtime() {
+		return eventOpenendtime;
+	}
+
+	public void setEventOpenendtime(Date eventOpenendtime) {
+		this.eventOpenendtime = eventOpenendtime;
+	}
+
+	public Date getEventAcceptancestarttime() {
+		return eventAcceptancestarttime;
+	}
+
+	public void setEventAcceptancestarttime(Date eventAcceptancestarttime) {
+		this.eventAcceptancestarttime = eventAcceptancestarttime;
+	}
+
+	public Date getEventAcceptanceendtime() {
+		return eventAcceptanceendtime;
+	}
+
+	public void setEventAcceptanceendtime(Date eventAcceptanceendtime) {
+		this.eventAcceptanceendtime = eventAcceptanceendtime;
+	}
+
+	public String getEventStopflag() {
+		return eventStopflag;
+	}
+
+	public void setEventStopflag(String eventStopflag) {
+		this.eventStopflag = eventStopflag;
+	}
+
+	public String getEventDelflag() {
+		return eventDelflag;
+	}
+
+	public void setEventDelflag(String eventDelflag) {
+		this.eventDelflag = eventDelflag;
+	}
+
+	public Date getEventUpdatetime() {
+		return eventUpdatetime;
+	}
+
+	public void setEventUpdatetime(Date eventUpdatetime) {
+		this.eventUpdatetime = eventUpdatetime;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 
 }
