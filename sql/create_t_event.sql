@@ -1,5 +1,7 @@
 --<ScriptOptions statementTerminator=";"/>
 
+DROP TABLE "public"."t_event";
+
 CREATE TABLE t_event (
 		event_id INT4,
 		title TEXT,

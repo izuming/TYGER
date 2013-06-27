@@ -11,7 +11,6 @@ import javax.naming.NamingException;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import sugiim.struts2sample.common.Common;
 import sugiim.struts2sample.entity.Event;
 
 /**
@@ -44,16 +43,16 @@ public class EventDao extends CommonDao {
 	 * @param id 検索条件id
 	 * @return 従業員のリスト
 	 */
-	public List<Event> selectById(String id)
+	public List<Event> selectAll()
 			throws Exception {
 
 		log.debug("Eventを取得する");
 
 		boolean idIsExist = false;
 
-		if (!Common.IsNullOrEmpty(id)) {
-			idIsExist = true;
-		}
+//		if (!Common.IsNullOrEmpty()) {
+//			idIsExist = true;
+//		}
 
 		// 接続コネクション
 		Connection con = super.getConnection();
@@ -90,11 +89,21 @@ public class EventDao extends CommonDao {
 				}
 
 				Event evt = new Event();
-				evt.setEventId(rs.getInt("eventId"));
-//				evt.setEventName(rs.getString("employeeName"));
-//				evt.setPassword(rs.getString("employee_password"));
-//				evt.setUpdtDate(rs.getDate("updt_date"));
-				
+				evt.setEventId(rs.getInt("event_id"));
+				evt.setEventTitle(rs.getString("Title"));
+				evt.setEventSubtitle(rs.getString("subtitle"));
+				evt.setEventSponsor(rs.getString("sponsor_name"));
+				evt.setEventDetail(rs.getString("event_detail"));
+				evt.setEventPlace(rs.getString("place"));
+				evt.setEventUrl(rs.getString("url"));
+				evt.setEventOpenstarttime(rs.getDate("open_start_time"));
+				evt.setEventOpenendtime(rs.getDate("open_end_time"));
+				evt.setEventAcceptancestarttime(rs.getDate("acceptance_start_time"));
+				evt.setEventAcceptanceendtime(rs.getDate("acceptance_end_time"));
+				evt.setEventStopflag(rs.getString("stop_flg"));
+				evt.setEventDelflag(rs.getString("delete_flg"));
+				evt.setEventUpdatetime(rs.getDate("updt_time"));
+
 				list.add(evt);
 			}
 		}
