@@ -41,6 +41,12 @@ public class EventAction extends ActionSupport {
 	private Event eventDataEntity;
 
 	/**
+	 * 表示用TestDataEntityのリスト
+	 */
+	private List<Event> eventDataEntityList;
+
+
+	/**
 	 *  検索条件
 	 */
 //	private TestDataInputEntity testDataInputEntity;
@@ -84,8 +90,13 @@ public class EventAction extends ActionSupport {
 			return "input";
 		}
 
-		//まずは先頭行のデータを表示
-		eventDataEntity = resultList.get(0);
+
+		eventDataEntityList =  blogic.selectTestData();
+//		//まずは先頭行のデータを表示
+//		for(int i =0; i < resultList.size(); ++i){
+//			eventDataEntity = resultList.get(i);
+//		}
+
 
 		if (log.isDebugEnabled()) {
 			log.debug("****  selectData End ****");

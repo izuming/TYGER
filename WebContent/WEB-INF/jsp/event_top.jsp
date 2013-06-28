@@ -56,15 +56,17 @@
 		<table class="table table-bordered table-striped">
 			<thead>
 				<tr>
-					<th>イベントID</th>
+					<th>イベントIDz</th>
 					<th>イベント名</th>
 				</tr>
 			</thead>
 			<tbody>
+
 				<tr>
-					<td><s:property value="eventDataEntity.eventId" /></td>
-					<td><s:property value="eventDataEntity.eventTitle" /></td>
+					<td>a<s:property value="eventDataEntityList.eventId" /></td>
+					<td><s:property value="eventTitle" /></td>
 				</tr>
+
 			</tbody>
 		</table>
 	</div>
@@ -82,7 +84,7 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td><s:property value="Event.eventId" /></td>
+					<td>b<s:property value="event_id" /></td>
 					<td><s:property value="Event.eventTitle" /></td>
 				</tr>
 			</tbody>

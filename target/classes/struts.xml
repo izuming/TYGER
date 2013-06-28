@@ -199,8 +199,13 @@
 		</action>
 
 		<!-- イベント一覧の初期表示用 -->
-		<action name="event_top">
-			<result>/WEB-INF/jsp/event_top.jsp</result>
+		<action name="event_top"  class="sugiim.struts2sample.action.EventAction">
+			<result name="success">/WEB-INF/jsp/event_top.jsp</result>
+		</action>
+
+		<action name="selectEvent" class="sugiim.struts2sample.action.EventAction">
+			<result name="input">/WEB-INF/jsp/event_top.jsp</result>
+			<result name="success">/WEB-INF/jsp/event_top.jsp</result>
 		</action>
 
 
