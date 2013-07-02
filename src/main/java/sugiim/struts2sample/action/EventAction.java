@@ -41,7 +41,7 @@ public class EventAction extends ActionSupport {
 	private Event eventDataEntity;
 
 	/**
-	 * 表示用TestDataEntityのリスト
+	 * 表示用eventDataEntityのリスト
 	 */
 	private List<Event> eventDataEntityList;
 
@@ -83,19 +83,17 @@ public class EventAction extends ActionSupport {
 		// 検索一覧の情報を取得する
 		EventBLogic blogic = new EventBLogic();
 //		testDataEntity = blogic.selectTestData(testDataInputEntity.getPerson_id());
-		List<Event> resultList = blogic.selectTestData();
-
-		if (resultList == null) {
-			addActionError("対象のIDは存在しませんでした。");
-			return "input";
-		}
-
-
-		eventDataEntityList =  blogic.selectTestData();
-//		//まずは先頭行のデータを表示
-//		for(int i =0; i < resultList.size(); ++i){
-//			eventDataEntity = resultList.get(i);
+		
+//		List<Event> resultList = blogic.selectTestData();
+//		
+//
+//		if (resultList == null) {
+//			addActionError("対象のIDは存在しませんでした。");
+//			return "input";
 //		}
+
+
+		setEventDataEntityList(blogic.selectTestData());
 
 
 		if (log.isDebugEnabled()) {
@@ -120,6 +118,16 @@ public class EventAction extends ActionSupport {
 	 */
 	public void setEventDataEntity(Event eventDataEntity) {
 		this.eventDataEntity = eventDataEntity;
+	}
+
+
+	public List<Event> getEventDataEntityList() {
+		return eventDataEntityList;
+	}
+
+
+	public void setEventDataEntityList(List<Event> eventDataEntityList) {
+		this.eventDataEntityList = eventDataEntityList;
 	}
 
 //	public String selectData2() throws Exception {

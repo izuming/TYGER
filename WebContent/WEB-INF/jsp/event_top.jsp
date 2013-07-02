@@ -56,17 +56,22 @@
 		<table class="table table-bordered table-striped">
 			<thead>
 				<tr>
-					<th>イベントIDz</th>
+					<th>イベントID</th>
 					<th>イベント名</th>
+					<th>イベント場所</th>
 				</tr>
 			</thead>
+
+
+
 			<tbody>
-
+			<s:iterator value="eventDataEntityList" var="dto">
 				<tr>
-					<td>a<s:property value="eventDataEntityList.eventId" /></td>
+					<td><s:property value="eventId" /></td>
 					<td><s:property value="eventTitle" /></td>
+					<td><s:property value="eventPlace" /></td>
 				</tr>
-
+			</s:iterator>
 			</tbody>
 		</table>
 	</div>
