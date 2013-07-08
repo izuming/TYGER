@@ -203,6 +203,7 @@
 			<result name="success">/WEB-INF/jsp/event_top.jsp</result>
 		</action>
 
+		<!-- イベント一覧からの詳細表示用 -->
 		<action name="selectEvent" class="sugiim.struts2sample.action.EventAction">
 			<result name="input">/WEB-INF/jsp/event_top.jsp</result>
 			<result name="success">/WEB-INF/jsp/event_top.jsp</result>

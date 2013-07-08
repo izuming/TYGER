@@ -59,10 +59,9 @@
 					<th>イベントID</th>
 					<th>イベント名</th>
 					<th>イベント場所</th>
+					<th>イベント詳細</th>
 				</tr>
 			</thead>
-
-
 
 			<tbody>
 			<s:iterator value="eventDataEntityList" var="dto">
@@ -70,6 +69,11 @@
 					<td><s:property value="eventId" /></td>
 					<td><s:property value="eventTitle" /></td>
 					<td><s:property value="eventPlace" /></td>
+					<td>
+						<div class="btn-group">
+							<button class ="btn btn-mini btn-danger" style="height:60p; font-weight: bold; vertical-align:middle;" onClick="updateSample('${person_id}')"><i class="icon-edit"></i>GO!</button>
+						</div>
+					</td>
 				</tr>
 			</s:iterator>
 			</tbody>
