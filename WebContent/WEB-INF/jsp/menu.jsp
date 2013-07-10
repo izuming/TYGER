@@ -70,7 +70,7 @@
 					<ul class="thumbnails">
 						<li class="span4">
 							<div class="thumbnail">
-								<a href="event_top!selectData">イベント一覧</a>
+								<a href="event_top!selectAllData">イベント一覧</a>
 								<div class="caption">
 								<p>更新、削除処理のサンプルです。</p>
 								<p>検索→更新（または削除）</p>

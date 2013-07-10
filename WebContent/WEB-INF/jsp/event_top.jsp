@@ -21,19 +21,9 @@
 			<div class="span9">
 				<div style="margin-top:30px">
 					<div class="page-header">
-					  <h1>Contents <small>sample... </small></h1>
+					  <h1>イベント一覧</h1>
 					</div>
 
-					<ul class="thumbnails">
-						<li class="span4">
-							<div class="thumbnail">
-								<a href="event_top">イベント一覧</a>
-								<div class="caption">
-								<p>イベント一覧です。</p>
-								</div>
-							</div>
-						</li>
-					</ul>
 
 
 <div class="span10">
@@ -70,9 +60,7 @@
 					<td><s:property value="eventTitle" /></td>
 					<td><s:property value="eventPlace" /></td>
 					<td>
-						<div class="btn-group">
-							<button class ="btn btn-mini btn-danger" style="height:60p; font-weight: bold; vertical-align:middle;" onClick="updateSample('${person_id}')"><i class="icon-edit"></i>GO!</button>
-						</div>
+						<a href="selectEvent!selectData2.action?eventDataInputEntity.event_id=${eventId}" >詳細</a>
 					</td>
 				</tr>
 			</s:iterator>

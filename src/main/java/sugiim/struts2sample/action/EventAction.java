@@ -9,12 +9,10 @@ import org.apache.commons.logging.LogFactory;
 
 import sugiim.struts2sample.blogic.EventBLogic;
 import sugiim.struts2sample.entity.Event;
+import sugiim.struts2sample.entity.EventDataEntity;
+import sugiim.struts2sample.entity.EventDataInputEntity;
 
 import com.opensymphony.xwork2.ActionSupport;
-//import sugiim.struts2sample.entity.TestDataEntity;
-//import sugiim.struts2sample.entity.TestDataInputEntity;
-//import sugiim.struts2sample.blogic.SampleBLogic;
-//import sugiim.struts2sample.blogic.SampleBLogic;
 
 
 /**
@@ -36,9 +34,9 @@ public class EventAction extends ActionSupport {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * 表示用TestDataEntity
+	 * 全件表示用TestDataEntity
 	 */
-	private Event eventDataEntity;
+	private Event eventAllDataEntity;
 
 	/**
 	 * 表示用eventDataEntityのリスト
@@ -47,9 +45,17 @@ public class EventAction extends ActionSupport {
 
 
 	/**
+	 * デモ用の暫定リスト
+	 */
+
+	private EventDataEntity eventDataEntity;
+
+	/**
 	 *  検索条件
 	 */
-//	private TestDataInputEntity testDataInputEntity;
+	private EventDataInputEntity eventDataInputEntity;
+
+
 
 
 	/**
@@ -70,31 +76,16 @@ public class EventAction extends ActionSupport {
 	 * @return success
 	 * @throws Exception 例外
 	 */
-	public String selectData() throws Exception {
+	public String selectAllData() throws Exception {
 
 		if (log.isDebugEnabled()) {
 			log.debug("****  selectData  ****");
 		}
 
-//		if (log.isDebugEnabled()) {
-//			log.debug("テストデータInputの中身:" + testDataInputEntity.toString());
-//		}
-
-		// 検索一覧の情報を取得する
+		// イベント一覧の情報を取得する
 		EventBLogic blogic = new EventBLogic();
-//		testDataEntity = blogic.selectTestData(testDataInputEntity.getPerson_id());
-		
-//		List<Event> resultList = blogic.selectTestData();
-//		
-//
-//		if (resultList == null) {
-//			addActionError("対象のIDは存在しませんでした。");
-//			return "input";
-//		}
-
 
 		setEventDataEntityList(blogic.selectTestData());
-
 
 		if (log.isDebugEnabled()) {
 			log.debug("****  selectData End ****");
@@ -105,20 +96,69 @@ public class EventAction extends ActionSupport {
 	}
 
 
+
 	/**
-	 * @return eventDataEntity
+	 * データを取得する
+	 *
+	 * @return success
+	 * @throws Exception 例外
 	 */
-	public Event getEventDataEntity() {
-		return eventDataEntity;
+	public String selectData() throws Exception {
+
+		if (log.isDebugEnabled()) {
+			log.debug("****  selectData  ****");
+		}
+
+		if (log.isDebugEnabled()) {
+			log.debug("テストデータInputの中身:" + eventDataInputEntity.toString());
+		}
+
+		// 検索一覧の情報を取得する
+		EventBLogic blogic = new EventBLogic();
+//		testDataEntity = blogic.selectTestData(testDataInputEntity.getPerson_id());
+		List<EventDataEntity> resultList = blogic.selectEventData(eventDataInputEntity.getEvent_id());
+
+		if (resultList == null) {
+			addActionError("対象のIDは存在しませんでした。");
+			return "input";
+		}
+
+		setEventDataEntity(resultList.get(0));
+
+		if (log.isDebugEnabled()) {
+			log.debug("****  selectData End ****");
+		}
+
+		// 画面遷移
+		return SUCCESS;
 	}
 
 
-	/**
-	 * @param eventDataEntity セットする eventDataEntity
-	 */
-	public void setEventDataEntity(Event eventDataEntity) {
-		this.eventDataEntity = eventDataEntity;
+
+	public String selectData2() throws Exception {
+
+		if (log.isDebugEnabled()) {
+			log.debug("****  selectData2  ****");
+		}
+
+		if (log.isDebugEnabled()) {
+			log.debug("テストデータInputの中身:" + eventDataInputEntity.toString());
+		}
+
+		// 検索一覧の情報を取得する
+		EventBLogic blogic = new EventBLogic();
+		List<EventDataEntity> resultList = blogic.selectEventData(eventDataInputEntity.getEvent_id());
+
+		if (resultList == null) {
+			addActionError("対象のIDは存在しませんでした。");
+		}
+
+		setEventDataEntity(resultList.get(0));
+
+		// 画面遷移
+		return SUCCESS;
 	}
+
 
 
 	public List<Event> getEventDataEntityList() {
@@ -130,116 +170,46 @@ public class EventAction extends ActionSupport {
 		this.eventDataEntityList = eventDataEntityList;
 	}
 
-//	public String selectData2() throws Exception {
-//
-//		if (log.isDebugEnabled()) {
-//			log.debug("****  selectData2  ****");
-//		}
-//
-//		if (log.isDebugEnabled()) {
-//			log.debug("テストデータInputの中身:" + testDataInputEntity.toString());
-//		}
-//
-//		// 検索一覧の情報を取得する
-//		SampleBLogic blogic = new SampleBLogic();
-////		testDataEntity = blogic.selectTestData(testDataInputEntity.getPerson_id());
-//		List<TestDataEntity> resultList = blogic.selectTestData(testDataInputEntity.getPerson_id());
-//
-//		if (resultList == null) {
-//			addActionError("対象のIDは存在しませんでした。");
-//		}
-//
-//		testDataEntity = resultList.get(0);
-//
-//		// 画面遷移
-//		return SUCCESS;
-//	}
-//	/**
-//	 * 入力条件をチェックする
-//	 */
-//	public void validateSelectData() {
-//
-//		if (log.isDebugEnabled()) {
-//			log.debug("****  validateSelectData  ****");
-//			log.debug("testDataInputEntity.getPerson_id : "
-//					+ testDataInputEntity.getPerson_id());
-//		}
-//
-//		// IDチェック
-//		if (Common.IsNullOrEmpty(testDataInputEntity.getPerson_id())) {
-//
-//			addActionError(getText("invalid.fieldvalue.person_id"));
-//		}
-//
-//		if (log.isDebugEnabled()) {
-//			log.debug("****  validateSelectData2  ****");
-//		}
-//	}
+	/**
+	 * @return eventDataInputEntity
+	 */
+	public EventDataInputEntity getEventDataInputEntity() {
+		return eventDataInputEntity;
+	}
 
-//	/**
-//	 * 入力条件をチェックする
-//	 */
-//	public String inputCheck() {
-//
-//		// わざとException
-////		inputError = null;
-////		inputError.length();
-//
-//		if (log.isDebugEnabled()) {
-//			log.debug("****  inputCheck  ****");
-//			log.debug("testDataInputEntity.getPoint : "
-//					+ testDataInputEntity.getPoint());
-//		}
-//
-//		// IDチェック
-//		if (Common.IsNullOrEmpty(testDataInputEntity.getPoint())) {
-//
-//			inputError = getText("invalid.fieldvalue.person_id.isnull");
-//		}else{
-//
-//			try {
-//				Integer.parseInt(testDataInputEntity.getPoint());
-//			} catch(NumberFormatException e) {
-//				inputError = getText("invalid.fieldvalue.person_id.notNumber");
-//			}
-//		}
-//
-//		if (Common.IsNullOrEmpty(inputError)){
-//			inputError = SUCCESS;
-//		}
-//
-//		if (log.isDebugEnabled()) {
-//			log.debug("****  inputCheck  ****");
-//		}
-//
-//		// 画面遷移
-//		return SUCCESS;
-//
-//	}
+	/**
+	 * @param eventDataInputEntity セットする eventDataInputEntity
+	 */
+	public void setEventDataInputEntity(EventDataInputEntity eventDataInputEntity) {
+		this.eventDataInputEntity = eventDataInputEntity;
+	}
 
 
 
-//	/**
-//	 * ポイント変更のアクション
-//	 */
-//	public String pointChange() {
-//
-//		if (log.isDebugEnabled()) {
-//
-//			log.debug("****  pointChange  ****");
-//			log.debug("testDataInputEntity.getPoint : "
-//					+ testDataInputEntity.getPoint());
-//			log.debug("****  pointChange end ****");
-//		}
-//
-//
-//		historyId = "007";
-//		// 画面遷移
-//		return SUCCESS;
-//	}
+	public Event getEventAllDataEntity() {
+		return eventAllDataEntity;
+	}
 
-	////////////////////////////////////
-	// Setter / Getter
+
+
+	public void setEventAllDataEntity(Event eventAllDataEntity) {
+		this.eventAllDataEntity = eventAllDataEntity;
+	}
+
+
+
+	public EventDataEntity getEventDataEntity() {
+		return eventDataEntity;
+	}
+
+
+
+	public void setEventDataEntity(EventDataEntity eventDataEntity) {
+		this.eventDataEntity = eventDataEntity;
+	}
+
+
+
 
 
 

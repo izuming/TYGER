@@ -36,8 +36,16 @@
 				<!-- 2行目のエリア -->
 				<div class="row">
 					<textarea class="span4">3</textarea>
-<!-- Button to trigger modal -->
-<a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
+				<!-- Button to trigger modal -->
+				<a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
+
+				<!-- 3行目のエリア -->
+				<div class="row">
+					<a href="login">仮設ログイン</a>
+				</div>
+
+
+
 
 <!-- Modal -->
 <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -53,7 +61,7 @@
     <button class="btn btn-primary">Save changes</button>
   </div>
 </div>
-					<div class="span4">
+					<div class="span5">
 					</div>
 				</div>
 
@@ -64,7 +72,7 @@
 		<div class="span3 nav nav-list bs-docs-sidenav">
 				<!-- 1行目のエリア -->
 				<div class="row">
-					<textarea class="span3">カレンダー</textarea>
+					<textarea class="span4">カレンダー</textarea>
 				</div>
 		</div>
 
