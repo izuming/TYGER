@@ -79,6 +79,34 @@
 						</li>
 					</ul>
 
+					<ul class="thumbnails">
+						<li class="span4">
+							<div class="thumbnail">
+								<a href="eventRegist">イベント情報登録</a>
+								<div class="caption">
+								<p>イベントを登録をします</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+					<ul class="thumbnails">
+						<li class="span4">
+							<div class="thumbnail">
+								<a href="event_top!selectAllData">イベント情報更新</a>
+								<div class="caption">
+								<p>イベントを更新します。</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+
+
+
+
+
+
 
 				</div>
 			</div>
