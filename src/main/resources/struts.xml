@@ -214,17 +214,9 @@
 			<result name="success">/WEB-INF/jsp/event.jsp</result>
 		</action>
 
-
-		<!-- イベント登録Action。 -->
+		<!-- イベント登録画面の初期表示 -->
 		<action name="eventRegist" class="sugiim.struts2sample.action.EventAction">
-			<interceptor-ref name="defaultLoginStack"/>
-			<interceptor-ref name="token">
-				<param name="includeMethods">registData</param><!-- ここで指定したメソッドにのみtokenのチェックを行う。全てのメソッドに適用したい場合は「*」を指定 -->
-			</interceptor-ref>
-			<result name="invalid.token">/WEB-INF/jsp/duplicationError.jsp</result><!-- tokenのチェックに引っかかった際の遷移先を指定 -->
-			<result name="init">/WEB-INF/jsp/eventRegist.jsp</result>
-			<result name="input">/WEB-INF/jsp/eventRegist.jsp</result>
-			<result name="success" type="redirect">/WEB-INF/jsp/eventRegist.jsp</result>
+			<result name="success">/WEB-INF/jsp/eventRegist.jsp</result>
 		</action>
 
 

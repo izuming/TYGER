@@ -160,6 +160,12 @@ public class EventAction extends ActionSupport {
 	}
 
 
+	public String registData() throws Exception {
+		
+		return SUCCESS;
+	}
+	
+	
 
 	public List<Event> getEventDataEntityList() {
 		return eventDataEntityList;
