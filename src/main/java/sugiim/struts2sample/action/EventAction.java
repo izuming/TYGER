@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.postgresql.util.PSQLException;
 
 import sugiim.struts2sample.blogic.EventBLogic;
 import sugiim.struts2sample.entity.Event;
@@ -50,6 +51,8 @@ public class EventAction extends ActionSupport {
 
 	private EventDataEntity eventDataEntity;
 
+	private EventDataEntity eventDataEntityTarget;
+	
 	/**
 	 *  検索条件
 	 */
@@ -161,6 +164,22 @@ public class EventAction extends ActionSupport {
 
 
 	public String registData() throws Exception {
+		
+		log.debug("**** registData Start ****");
+
+		EventBLogic blogic = new EventBLogic();
+		try {
+			eventDataEntityTarget = blogic.registData(eventDataEntity);
+		} catch (PSQLException e) {
+//			addActionError(getText("invalid.regist.duplicate_id",
+//					new int [] { eventDataEntity.getEvent_id() }));
+			
+			return "input";
+		}
+
+		log.debug("**** registData End ****");
+		
+		
 		
 		return SUCCESS;
 	}

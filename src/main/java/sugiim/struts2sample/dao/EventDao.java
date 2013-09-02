@@ -212,7 +212,7 @@ public class EventDao extends CommonDao {
 				edEntitiy.setAcceptance_end_time(rs.getString("acceptance_end_time"));
 				edEntitiy.setStop_flg(rs.getString("stop_flg"));
 				edEntitiy.setDelete_flg(rs.getString("delete_flg"));
-				edEntitiy.setUpdt_time(rs.getString("updt_time"));
+				edEntitiy.setUpdt_time(rs.getDate("updt_time"));
 				list.add(edEntitiy);
 			}
 		}
@@ -241,5 +241,55 @@ public class EventDao extends CommonDao {
 		return list;
 	}
 
+
+	public int registEventData(EventDataEntity tdEntity)			throws Exception {
+
+		log.debug("Evnetデータを登録する");
+
+		// 接続コネクション
+		Connection con = super.getConnection();
+		// Statementオブジェクト
+		PreparedStatement pstmt = null;
+		// ResultSetオブジェクト
+		int rs = 0;
+
+		try {
+
+			String SQL = "INSERT INTO t_event (event_id, title, subtitle, updt_date) VALUES (?, ?, ?, ?);";
+			//String SQL = "select person_id, name, age, updt_date from T_Test; ";
+
+			pstmt = con.prepareStatement(SQL);
+//			pstmt.setQueryTimeout(CommonDao.getSqlExcuteTimeout());
+
+			pstmt.setInt(1, tdEntity.getEvent_id());
+			pstmt.setString(2, tdEntity.getTitle());
+			pstmt.setString(3, tdEntity.getSubtitle());
+			pstmt.setDate(4, new java.sql.Date(tdEntity.getUpdt_date().getTime())); // 暫定対応
+
+			// Insert, UpdateはexecuteUpdate
+			rs = pstmt.executeUpdate();
+
+		}
+
+		finally {
+			if (pstmt != null) {
+				try {
+					pstmt.close();
+				} catch (Exception e) {
+				}
+			}
+			if (con != null) {
+				try {
+					con.close();
+				} catch (Exception e) {
+				}
+			}
+		}
+
+		System.out.println("**** SampleDAO.registTestData 実行結果:" + rs + " ****");
+
+		// 結果を返す
+		return rs;
+	}
 
 }

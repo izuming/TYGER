@@ -1,6 +1,7 @@
 package sugiim.struts2sample.entity;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * EventData用Entryクラス
@@ -86,7 +87,7 @@ public class EventDataEntity implements Serializable {
 	/**
 	 *  updt_time
 	 */
-	private String updt_time;
+	private Date updt_time;
 
 	/* (非 Javadoc)
 	 * @see java.lang.Object#toString()
@@ -347,17 +348,24 @@ public class EventDataEntity implements Serializable {
 	 *
 	 * @return updt_time
 	 */
-	public String getUpdt_time() {
+	public Date getUpdt_time() {
 		return updt_time;
 	}
 
 	/**
 	 * updt_timeを設定する
 	 *
-	 * @param updt_time 設定updt_time
+	 * @param date 設定updt_time
 	 */
-	public void setUpdt_time(String updt_time) {
-		this.updt_time = updt_time;
+	public void setUpdt_time(Date date) {
+		this.updt_time = date;
+	}
+
+
+
+	public Date getUpdt_date() {
+		// TODO 自動生成されたメソッド・スタブ
+		return null;
 	}
 
 }
