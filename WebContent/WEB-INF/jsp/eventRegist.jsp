@@ -100,7 +100,7 @@ $(document).ready(function() {
 
 	<div class="container-fluid"><!-- information-->
 		<div class="well well-large">
-			<s:form action="registSample!registData" cssClass="form-horizontal" id="registForm" cssStyle="padding: 0px 5px" >
+			<s:form action="registEvent!registData" cssClass="form-horizontal" id="registForm" cssStyle="padding: 0px 5px" >
 
 			<div class="row"><!-- error表示領域 -->
 				<div class="offset2 span8">

@@ -215,7 +215,7 @@
 		</action>
 
 		<!-- イベント登録画面の初期表示 -->
-		<action name="eventRegist" class="sugiim.struts2sample.action.EventAction">
+		<action name="registEvent" class="sugiim.struts2sample.action.EventRegistAction">
 			<result name="input">/WEB-INF/jsp/eventRegist.jsp</result>
 			<result name="success">/WEB-INF/jsp/eventRegist.jsp</result>
 		</action>

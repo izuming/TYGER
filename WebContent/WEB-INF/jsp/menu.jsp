@@ -82,7 +82,7 @@
 					<ul class="thumbnails">
 						<li class="span4">
 							<div class="thumbnail">
-								<a href="eventRegist!registData">イベント情報登録</a>
+								<a href="registEvent!registData">イベント情報登録</a>
 								<div class="caption">
 								<p>イベントを登録をします</p>
 								</div>

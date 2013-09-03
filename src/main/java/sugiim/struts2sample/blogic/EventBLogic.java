@@ -6,6 +6,7 @@ import java.util.List;
 import sugiim.struts2sample.dao.EventDao;
 import sugiim.struts2sample.entity.Event;
 import sugiim.struts2sample.entity.EventDataEntity;
+import sugiim.struts2sample.entity.EventDataInputEntity;
 
 /**
  * @author nttdbs_sugiim
@@ -41,7 +42,7 @@ public class EventBLogic {
 		return dao.selectEventData(id);
 
 	}
-	public EventDataEntity registData(EventDataEntity tdInputEntity) 
+	public EventDataEntity registData(EventDataInputEntity tdInputEntity) 
 			throws Exception {
 
 	// TestDataを登録する
